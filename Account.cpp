@@ -5,9 +5,8 @@
 using namespace std;
 
 Account::Account(string accountNumber, string firstName, string lastName, string date_of_birth, string gender, string address, string email, string phone_no, double initial_balance)
-    : Customer(accountNumber, firstName, lastName, date_of_birth, gender, address, email, phone_no), account_balance(initial_balance) {}
+    : Customer(accountNumber, firstName, lastName, date_of_birth, gender, address, email, phone_no), account_balance(initial_balance)
 {
-    account_balance = initial_balance;
     if (initial_balance >= 0)
     {
         account_balance = initial_balance;
