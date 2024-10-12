@@ -5,8 +5,6 @@ using namespace std;
 Customer::Customer(string accountNumber, string firstName, string lastName, string date_of_birth, string gender, string address, string phone_no, string email)
     : accountNumber(accountNumber), firstName(firstName), lastName(lastName), date_of_birth(date_of_birth), gender(gender), address(address), phone_no(phone_no), email(email){}
 
-
-
 void Customer::setAccountNumber(string setAccountNumber)
 {
     accountNumber = setAccountNumber;

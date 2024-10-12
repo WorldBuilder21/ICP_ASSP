@@ -7,7 +7,7 @@ using namespace std;
 
 class Account : public Customer
 {
-protected:
+private:
     double account_balance;
 
 public:

@@ -5,7 +5,7 @@
 using namespace std;
 
 Account::Account(string accountNumber, string firstName, string lastName, string date_of_birth, string gender, string address, string email, string phone_no, double initial_balance)
-    : Customer(accountNumber, firstName, lastName, date_of_birth, gender, address, email, phone_no)
+    : Customer(accountNumber, firstName, lastName, date_of_birth, gender, address, email, phone_no), account_balance(initial_balance) {}
 {
     account_balance = initial_balance;
     if (initial_balance >= 0)
@@ -19,21 +19,19 @@ Account::Account(string accountNumber, string firstName, string lastName, string
     }
 }
 
-void Account::credit(double credit) 
+void Account::credit(double credit)
 {
     account_balance += credit;
 }
 
-void Account::debit(double debit) 
+void Account::debit(double debitAmount)
 {
-    if (account_balance >= debit)
-    {
-        account_balance -= debit;
-    }
-    else
+    if (debitAmount > account_balance)
     {
         cout << "Not enough funds available in account for withdrawal" << endl;
+        return;
     }
+    account_balance -= debitAmount;
 }
 
 double Account::getBalance() const
